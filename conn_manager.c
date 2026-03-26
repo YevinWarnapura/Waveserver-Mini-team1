@@ -186,6 +186,10 @@ void handle_delete_conn(const udp_message_t *req, udp_message_t *resp)
     if (found_conn == NULL) {
         err = "could not find connection with that name";
         LOG(LOG_ERROR, "%s (name=%s)", err, udp_payload->name);
+
+        // if connection name isnt found, set status has to be set to STATUS_FAILURE
+        resp->status = STATUS_FAILURE;
+        
         return;
     }
 
