@@ -52,6 +52,7 @@ void log_write(log_level_t level,
     if (f)
     {
         fputs(log_line, f);
+        fclose(f);//When using loops, will result in too many open files, so must close after use
     }
     else
     {
