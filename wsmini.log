@@ -8,3 +8,4 @@
 [26-03-26 19:12:28] [ERROR] [traffic_mgr] [common.c:80] Could not bind to socket
 [26-03-26 19:12:28] [INFO] [traffic_mgr] [traffic_manager.c:16] Traffic stats initialized
 [26-03-26 19:18:01] [INFO] [cli] [cli.c:694] CLI exited
+[26-03-26 20:59:01] [INFO] [conn_mgr] [conn_manager.c:13] Initialize connection table

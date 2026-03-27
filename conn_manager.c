@@ -35,7 +35,7 @@ bool get_port_info(uint8_t port_id, port_t *out)
         return false;
     }
 
-    memcpy(out, resp.payload, sizeof(out));
+    memcpy(out, resp.payload, sizeof(port_t));
     return true;
 }
 
@@ -189,7 +189,7 @@ void handle_delete_conn(const udp_message_t *req, udp_message_t *resp)
 
         // if connection name isnt found, set status has to be set to STATUS_FAILURE
         resp->status = STATUS_FAILURE;
-        
+
         return;
     }
 
